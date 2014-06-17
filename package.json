@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/AgtLucas/deviance/issues"
   },
-  "homepage": "https://github.com/AgtLucas/deviance"
+  "homepage": "https://github.com/AgtLucas/deviance",
+  "devDependencies": {
+    "browserify": "^4.1.10",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^2.1.0"
+  }
 }
