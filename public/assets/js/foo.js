@@ -1,5 +1,11 @@
-'use strict';
+var $ = require('jquery');
 
-console.log('Hello, foo.js');
+var foo = (function () {
+
+  $('.click-me').on('click', function () {
+    alert('Foo!');
+  });
+
+}());
 
 module.exports = foo;
