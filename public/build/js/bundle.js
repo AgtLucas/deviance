@@ -15982,13 +15982,15 @@ return jQuery;
 },{}],3:[function(require,module,exports){
 var _ = require('lodash');
 var bar = require('./bar');
+var foo = require('./foo');
 
 _.forEach({'one': 1, 'two': 2, 'three': 3}, function (num) {
   console.log(num);
 });
 
 bar;
-},{"./bar":4,"lodash":2}],4:[function(require,module,exports){
+foo;
+},{"./bar":4,"./foo":5,"lodash":2}],4:[function(require,module,exports){
 var $ = require('jquery');
 
 var bar = (function () {
@@ -16000,4 +16002,16 @@ var bar = (function () {
 }());
 
 module.exports = bar;
+},{"jquery":1}],5:[function(require,module,exports){
+var $ = require('jquery');
+
+var foo = (function () {
+
+  $('.click-me').on('click', function () {
+    alert('Foo!');
+  });
+
+}());
+
+module.exports = foo;
 },{"jquery":1}]},{},[3])
