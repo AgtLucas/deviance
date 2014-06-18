@@ -1,12 +1,11 @@
-var _ = require('lodash');
+var $ = require('jquery');
 
-var bar = function () {
-  var array = [1, 2, 3, 4, 5, 6];
-  var evens = _.remove(array, function(num) { return num % 2 == 0; });
+var bar = (function () {
 
-  console.log(array);
+  $('.click-me').on('click', function () {
+    alert('Yo!');
+  });
 
-  console.log(evens);
-};
+}());
 
 module.exports = bar;
