@@ -14,7 +14,15 @@ module.exports = function (grunt) {
     browserify: {
       dist: {
         files: {
-          '<%= meta.pathJSBuild %>/app.js': ['<%= meta.pathJS %>/app.js']
+          '<%= meta.pathJSBuild %>/bundle.js': ['<%= meta.pathJS %>/app.js']
+        }
+      }
+    },
+
+    uglify: {
+      target: {
+        files: {
+          '<%= meta.pathJSBuild %>/app.js': ['<%= meta.pathJS %>/bundle.js']
         }
       }
     }
