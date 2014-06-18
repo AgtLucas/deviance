@@ -1,7 +1,5 @@
-'use strict';
+var _ = require('lodash');
 
-var foo = require('./foo');
-// var bar = require('./bar');
-
-foo;
-// bar();
+_.forEach({'one': 1, 'two': 2, 'three': 3}, function (num) {
+  console.log(num);
+});
