@@ -22,13 +22,20 @@ module.exports = function (grunt) {
     uglify: {
       target: {
         files: {
-          '<%= meta.pathJSBuild %>/app.js': ['<%= meta.pathJS %>/bundle.js']
+          '<%= meta.pathJSBuild %>/app.js': ['<%= meta.pathJSBuild %>/bundle.js']
         }
+      }
+    },
+
+    watch: {
+      browserify: {
+        files: ['<%= meta.pathJS %>/**/*.js'],
+        tasks: ['browserify']
       }
     }
 
   });
 
-  grunt.registerTask('default', ['browserify']);
+  grunt.registerTask('default', ['watch']);
 
 };
