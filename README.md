@@ -1,4 +1,0 @@
-deviance
-========
-
-Playing with Browserify
